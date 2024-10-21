@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="COMIDA.CSS">
+    
+
+    <style>
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 35%;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .cart.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .cart.hide {
+            opacity: 0;
+            transform: translateY(-20px);
+            display: none;
+        }
+        
+        .product {
+            margin: 20px 0;
+        }
+        
+        .product button {
+            margin-top: 10px;
+        }
+
+        .fixed-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .cart img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+    </style>
+
+
+    <title>Menú - Centro de Comida Deliciosa</title>
+</head>
+<body>
+    <header>
+        <h1>Menú</h1>
+        <nav>
+            <ul>
+                <li><a href="COMIDA.HMTL.html">Inicio</a></li>
+                <li><a href="sobre nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <section id="menu">
+            <h2>Nuestro Menú</h2>
+            <p>Descubre nuestra selección de platos preparados con los mejores ingredientes frescos y de calidad.</p>
+
+            <div class="dish">
+                <div class="menuALMUERZO">
+                    <div class="cajaima">
+                        <img src="sardinas.jpg" width="250">
+                    </div>
+                    <div class="Contenido">
+                        <p>Patacones con sardinas</p>
+                        <p> 10.00 Bs</p>
+                        <button onclick="addItem('Patacones con sardinas', 10.00, 'sardinas.jpg')">Añadir al Carrito</button>
+                    </div>
+                </div>
+
+
+                <div class="menuALMUERZO">
+                    <div class="cajaima">
+                        <img src="arepa.jpg" width="250">
+                    </div>
+                    <div class="Contenido">
+                        <p>Arepa de huevo</p>
+                        <p> 5.00 Bs</p>
+                        <button onclick="addItem('Arepa de huevo', 5.00, 'arepa.jpg')">Añadir al Carrito</button>
+                    </div>
+                </div>
+
+
+
+                <div class="menuALMUERZO">
+                    <div class="cajaima">
+                        <img src="buñuelos.jpg" width="250">
+                    </div>
+                    <div class="Contenido">
+                        <p>Buñuelos de arroz rellenos</p>
+                        <p> 6.00 Bs</p>
+                        <button onclick="addItem('Buñuelos de arroz rellenos', 6.00, 'buñuelos.jpg')">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="dish">
+                <div class="menuALMUERZO">
+                    <div class="cajaima">
+                        <img src="galletas.jpg" width="250">
+                    </div>
+                    <div class="Contenido">
+                        <p>Ceviche de atún con galletas</p>
+                        <p> 8.00 Bs</p>
+                        <button onclick="addItem('Ceviche de atún con galletas', 8.00, 'galletas.jpg')">Añadir al Carrito</button>
+                    </div>
+                </div>
+
+
+                <div class="menuALMUERZO">
+                    <div class="cajaima">
+                        <img src="atun.jpg" width="250">
+                    </div>
+                    <div class="Contenido">
+                        <p>Atún a la criolla</p>
+                        <p> 12.00 Bs</p>
+                        <button onclick="addItem('Ceviche de atún con galletas', 12.00, 'atun.jpg')">Añadir al Carrito</button>
+                    </div>
+                </div>
+
+                <div class="menuALMUERZO">
+                    <div class="cajaima">
+                        <img src="frijoles.jpg" width="250">
+                    </div>
+                    <div class="Contenido">
+                        <p>Arepa paisa con atún y frijoles</p>
+                        <p> 10.00 Bs</p>
+                        <button onclick="addItem('Arepa paisa con atún y frijoles', 10.00, 'frijoles.jpg')">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dish">
+                <div class="menuALMUERZO">
+                    <div class="cajaima">
+                        <img src="AMERICANO.jpg" width="250">
+                    </div>
+                    <div class="Contenido">
+                        <p>Sándwich americano con atún</p>
+                        <p> 13.00 Bs</p>
+                        <button onclick="addItem('Sándwich americano con atún', 13.00, 'AMERICANO.jpg')">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="menuALMUERZO">
+                    <div class="cajaima">
+                        <img src="ARANDANO.jpg" width="250">
+                    </div>
+                    <div class="Contenido">
+                        <p>Poke de atún con arándanos</p>
+                        <p> 20.00 Bs</p>
+                        <button onclick="addItem('Poke de atún con arándanos', 20.00, 'ARANDANO.jpg')">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="menuALMUERZO">
+                    <div class="cajaima">
+                        <img src="MEXICO.jpg" width="250">
+                    </div>
+                    <div class="Contenido">
+                        <p>Sandwich mexicano con atún Van Camps</p>
+                        <p> 7.00 Bs</p>
+                        <button onclick="addItem('Sandwich mexicano con atún Van Camps', 7.00, 'MEXICO.jpg')">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+        <button class="fixed-button" onclick="toggleCart()">Ver Carrito</button>
+    
+    <div class="cart" id="cart">
+        <h3>Carrito de Compras</h3>
+        <ul id="cartItems">
+            <!-- Los items del carrito se agregarán aquí -->
+        </ul> 
+        <p>Total: <span id="totalPrice">0.00 </span> Bs</p>
+        <button onclick="checkout()">Pagar</button>
+    </div>
+
+    
+
+    <script>
+        var cartVisible = false;
+        var cartItems = [];
+        var totalPrice = 0;
+
+        function toggleCart() {
+            var cart = document.getElementById('cart');
+            if (cartVisible) {
+                cart.classList.remove('show');
+                cart.classList.add('hide');
+                setTimeout(function() {
+                    cart.style.display = 'none';
+                }, 500); // Correspondiente al tiempo de la animación
+            } else {
+                cart.style.display = 'block';
+                setTimeout(function() {
+                    cart.classList.remove('hide');
+                    cart.classList.add('show');
+                }, 10); // Pequeño retraso para permitir la transición
+            }
+            cartVisible = !cartVisible;
+        }
+
+        function addItem(name, price, image) {
+            var item = cartItems.find(item => item.name === name);
+            if (item) {
+                item.quantity++;
+            } else {
+                cartItems.push({ name: name, price: price, image: image, quantity: 1 });
+            }
+            updateCart();
+        }
+
+        function removeItem(name) {
+            var index = cartItems.findIndex(item => item.name === name);
+            if (index !== -1) {
+                cartItems.splice(index, 1);
+            }
+            updateCart();
+        }
+
+        function decreaseItem(name) {
+            var item = cartItems.find(item => item.name === name);
+            if (item) {
+                item.quantity--;
+                if (item.quantity === 0) {
+                    removeItem(name);
+                }
+            }
+            updateCart();
+        }
+
+        function increaseItem(name) {
+            var item = cartItems.find(item => item.name === name);
+            if (item) {
+                item.quantity++;
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            var cartItemsList = document.getElementById('cartItems');
+            cartItemsList.innerHTML = '';
+            cartItems.forEach(function(item) {
+                var li = document.createElement('li');
+                li.innerHTML = `<br><img src="${item.image}" alt="${item.name}"> ${item.name} - ${item.price.toFixed(2)} Bs x ${item.quantity} 
+                                <br><button onclick="decreaseItem('${item.name}')">-</button> 
+                                <button onclick="increaseItem('${item.name}')">+</button> 
+                                <button onclick="removeItem('${item.name}')">Eliminar</button>`;
+                cartItemsList.appendChild(li);
+            });
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            totalPrice = cartItems.reduce(function(total, item) {
+                return total + (item.price * item.quantity);
+            }, 0);
+            document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+        }
+
+        function checkout() {
+            alert('El total a pagar es: ' + totalPrice.toFixed(2)+' Bs');
+        }
+    </script>
+        
+    
+   
+
+    
+
+    
+    </main>
+    <br>
+    <footer>
+        <p>&copy; 2024 Centro de Comida Deliciosa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

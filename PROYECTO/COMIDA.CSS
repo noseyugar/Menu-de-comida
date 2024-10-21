@@ -1,0 +1,455 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-image:url(fondo\ rojo.jpg);
+    background-size: contain;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    font-family: algerian;
+    border-radius: 15pt;
+    margin: 1%;
+}
+
+.nuestras-especialidades{
+    display: flex;
+    margin-top: 3%;
+    justify-content: space-between;
+    width: 100%;
+}
+.parti{
+    display: flex;
+    margin-top: 3%;
+    margin-left: 10%;
+    justify-content: space-between;
+    width: 80%;
+}
+.inicoDESAYUNO {
+    display: inline-block;
+    width: 250px;
+    border-radius: 8px;
+    aspect-ratio: 1/1.2;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(0, 0, 0);
+}
+.inicoALMUERZO {
+    display: inline-block;
+    width: 350px;
+    border-radius: 8px;
+    aspect-ratio: 1/0.5;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(0, 0, 0);
+}
+.inicoCENA {
+    display: inline-block;
+    width: 250px;
+    border-radius: 8px;
+    aspect-ratio: 1/1.0;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.inicoDESAYUNO .cajaima img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.inicoDESAYUNO::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.inicoDESAYUNO:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+
+.inicoDESAYUNO:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.inicoDESAYUNO .Contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color:rgb(255, 255, 255)
+}
+
+.inicoDESAYUNO:hover .Contenido {
+    opacity: 1;
+}
+
+.inicoDESAYUNO .Contenido .p {
+    scale: 1;
+    opacity: 1;
+}
+
+
+
+
+.inicoALMUERZO .cajaima img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.inicoALMUERZO::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.inicoALMUERZO:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+
+.inicoALMUERZO:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.inicoALMUERZO .Contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color:rgb(255, 255, 255)
+}
+
+.inicoALMUERZO:hover .Contenido {
+    opacity: 1;
+}
+
+.inicoALMUERZO .Contenido .p {
+    scale: 1;
+    opacity: 1;
+}
+
+
+
+.inicoCENA .cajaima img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.inicoCENA::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.inicoCENA:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+
+.inicoCENA:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.inicoCENA .Contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color:rgb(255, 255, 255);
+    
+}
+
+.inicoCENA:hover .Contenido {
+    opacity: 1;
+    
+}
+
+.inicoCENA .Contenido .p {
+    scale: 1;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+.menuALMUERZO {
+    display: inline-block;
+    width: 300px;
+    border-radius: 8px;
+    aspect-ratio: 1/0.75;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+
+
+
+
+.somos {
+    display: inline-block;
+    width: 200px; /* Ajusta según necesites */
+    aspect-ratio: 1/1.2;
+    overflow: hidden;
+    border: 2px solid rgb(0, 0, 0);
+    position: relative;
+    text-align: center;
+    transition: transform 0.5s, height 0.5s; /* Añadimos una transición para el movimiento y altura */
+}
+
+.cuadro {
+    width: 150px; /* Aumentamos el tamaño */
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto; /* Centra el cuadro dentro del contenedor */
+    color: black;
+}
+
+.cuadro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido {
+    margin-top: 10px;
+    color: black;
+}
+
+.somos:hover .texto-abajo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.somos:hover {
+    transform: translateY(-10px); /* Hace que todo el div suba un poco */
+    height: 280px; /* Ajustamos la altura para que el texto entre */
+}
+
+.texto-abajo {
+    position: absolute;
+    top: 220px; /* Ajusta según necesites para posicionar el texto más abajo */
+    left: 15%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menuALMUERZO .cajaima img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.menuALMUERZO::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+
+.menuALMUERZO:hover img {
+    filter: grayscale(1) brightness(0.4);
+}
+
+.menuALMUERZO:hover::after {
+    opacity: 1;
+    inset: 20px;
+}
+
+.Contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color: rgb(255, 255, 255);
+    z-index: 2; /* Asegúrate de que el contenido esté por encima de otros elementos */
+}
+
+.menuALMUERZO:hover .Contenido {
+    opacity: 1;
+}
+
+.Contenido p,
+.Contenido button {
+    margin-top: 10px;
+    z-index: 3; /* Asegúrate de que el botón esté por encima del contenido */
+}
+
+.Contenido button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    box-shadow: 0 0 100px rgb(0, 0, 0);
+    border-radius: 15pt;
+    padding: 10pt;
+    font-family: cursive;
+    padding: 20px;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.imagen-principal, .imagen-sobre {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.dish {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+
+
+   
+        display: flex;
+        margin-top: 3%;
+        justify-content: space-between;
+        width: 97%;
+    border: 0.5px solid black;
+    border-radius: 4px;
+}
+
+.dish img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #c11d00;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-image:url(fondo\ rojo.jpg);
+    background-size: contain;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    font-family: algerian;
+    border-radius: 15pt;
+    margin: 1%;
+}
